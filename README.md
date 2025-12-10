@@ -24,4 +24,17 @@ Accepts a user's name as input and returns a personalized greeting message.
 
 **Input:** `{"name": "Sedat"}`  
 **Output:** `{"greeting": "Hello, Sedat! Welcome!"}`
+```
+
+**GitHub Topics (tags):**
+```
+langgraph
+python
+state-machine
+graph-framework
+langchain
+agent
+state-graph
+uv
+learning-project
 
