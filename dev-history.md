@@ -64,6 +64,31 @@
 
 ---
 
+## Commit 4: Unit Tests
+**Date:** 2024-12-10
+
+**What I did:**
+- Added pytest and pytest-asyncio as dev dependencies
+- Created comprehensive test suite with 8 test cases
+- Tested both `greeting_node` function and complete graph
+- Covered edge cases: simple names, multiple names, Unicode, empty input
+
+**AI prompts:**
+- "Write comprehensive pytest unit tests for a LangGraph greeting agent. Test both the node function and the complete graph invocation."
+
+**Manual changes:**
+- Created `tests/` directory with `__init__.py` and `test_greeting.py`
+- Ran tests with `uv run pytest` - all 8 tests passed 
+
+**Test coverage:**
+- `TestGreetingNode`: 4 tests for the node function
+- `TestGreetingGraph`: 4 tests for graph creation and invocation
+
+**Resources used:**
+- [pytest Documentation](https://docs.pytest.org/)
+
+---
+
 ## Summary
 
 **Key learnings:**
