@@ -1,12 +1,20 @@
-"""LangGraph greeting agent implementation."""
+"""LangGraph greeting agent implementation with LangSmith tracing."""
+import os
+from dotenv import load_dotenv
 from langgraph.graph import StateGraph, START, END
+from langsmith import traceable
 from greeting_agent.state import GreetingState
 
+# Load environment variables
+load_dotenv()
 
+
+@traceable(name="greeting_node")
 def greeting_node(state: GreetingState) -> dict:
     """Generate a greeting message from the input name.
 
     This node does NOT use any LLM - it's pure Python logic.
+    Traced with LangSmith for observability.
 
     Args:
         state: The current state containing the name
@@ -19,6 +27,7 @@ def greeting_node(state: GreetingState) -> dict:
     return {"greeting": greeting_message}
 
 
+@traceable(name="create_greeting_graph")
 def create_graph() -> StateGraph:
     """Create and compile the greeting graph.
 
