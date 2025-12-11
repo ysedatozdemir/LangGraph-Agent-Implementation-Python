@@ -186,6 +186,42 @@ The test suite includes:
 
 **Current status:** 8/8 tests passing ✅
 
+## 📊 LangSmith Integration
+
+This project includes LangSmith tracing for observability and debugging.
+
+### Setup
+
+1. Create a `.env` file in the root directory:
+```bash
+LANGSMITH_TRACING=true
+LANGSMITH_ENDPOINT=https://eu.api.smith.langchain.com
+LANGSMITH_API_KEY=your_api_key_here
+LANGSMITH_PROJECT=your_project_name
+```
+
+2. Get your API key from [LangSmith](https://smith.langchain.com/)
+
+### View Traces
+
+After running the agent, view traces in the LangSmith dashboard:
+
+https://smith.langchain.com/
+
+**Features:**
+- ✅ Automatic tracing of all graph executions
+- ✅ Node-level observability
+- ✅ Execution time tracking
+- ✅ State transitions visible in web UI
+
+**Note:** The `langgraph dev` local server feature is not available due to Rust/C++ build tool problem on my computer. However, all tracing and visualization features are available through the LangSmith web interface.
+
+### Trace Visualization
+
+![LangSmith Dashboard showing greeting agent execution trace](https://image2url.com/images/1765494881570-b86e97bb-c7f3-4d16-9ac7-e81d9517d350.png)
+
+*LangSmith dashboard showing the greeting agent execution with traced nodes and state transitions*
+
 ## 📝 Development History
 
 See [dev-history.md](dev-history.md) for detailed development process, AI prompts used, and manual changes made during implementation.
