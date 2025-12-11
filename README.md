@@ -163,6 +163,29 @@ Run the demo script to verify everything works:
 uv run python -m greeting_agent.main
 ```
 
+This project includes comprehensive unit tests using pytest.
+
+### Run Tests
+```bash
+uv run pytest
+```
+
+### Run Tests with Verbose Output
+```bash
+uv run pytest -v
+```
+
+### Test Coverage
+
+The test suite includes:
+- ✅ Greeting node function tests (4 tests)
+- ✅ Graph creation and compilation tests
+- ✅ Graph invocation with various inputs
+- ✅ Edge cases: Unicode characters, empty names
+- ✅ State structure validation
+
+**Current status:** 8/8 tests passing ✅
+
 ## 📝 Development History
 
 See [dev-history.md](dev-history.md) for detailed development process, AI prompts used, and manual changes made during implementation.
